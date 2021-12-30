@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 #### 運行主程式
 ```bash
-python src/main.py
+python anime1download
 ```
 
 ### 聲明

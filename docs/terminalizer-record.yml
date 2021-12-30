@@ -115,7 +115,7 @@ records:
   - delay: 11
     content: "\e]7;file://No-Name.lan/git/\a$ "
   - delay: 3810
-    content: python src/main.py
+    content: python anime1download
   - delay: 637
     content: "\r\n"
   - delay: 253

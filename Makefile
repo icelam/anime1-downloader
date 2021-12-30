@@ -1,7 +1,7 @@
 .PHONY: create-venv clean-venv test-with-venv first-release release lint
 
 VENV_ACTIVATE_PATH=venv/bin/activate
-SRC_FOLDER=src/
+SRC_FOLDER=anime1download
 
 # Init new virtual environment
 create-venv:
@@ -16,7 +16,7 @@ test-with-venv:
 	( \
 		. ${VENV_ACTIVATE_PATH}; \
     pip install -r requirements.txt; \
-    python ${SRC_FOLDER}/main.py \
+    python ${SRC_FOLDER} \
   )
 
 # Run pylint checking
