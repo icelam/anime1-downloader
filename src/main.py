@@ -25,34 +25,38 @@ class NoVideoFoundError(Error):
     """Raised when search result is empty in download_video()"""
     pass
 
+class VideoStreamConnectionError(Error):
+    """Raised when video stream connection isn't returning status code 200 in download_video()"""
+    pass
+
 def main():
     """Main entry function that display questions to guide user through the download journey"""
     print('== 歡迎使用 Anime1.me 下載器 ==\n')
 
-    answer = prompt([{
+    answer1 = prompt([{
         'type': 'input',
         'name': 'keyword',
         'message': '請輸入搜尋關鍵字（例如：刀劍神域）',
         'validate': lambda value: value != '' or '請輸入搜尋關鍵字！'
     }])
 
-    anime_list = search_anime(answer['keyword'])
+    anime_list = search_anime(answer1['keyword'])
     category_list = get_unique_categories(anime_list)
 
-    answer = prompt([{
+    answer2 = prompt([{
         'type': 'list',
         'name': 'category',
         'message': '你想下載哪一套動畫？',
         'choices': category_list
     }])
 
-    answer = prompt([{
+    answer3 = prompt([{
         'type': 'checkbox',
         'name': 'episode',
         'message': '請選擇要下載的集數',
         'choices': [
             { 'name': anime['title'] } for anime in anime_list \
-                if anime['category'] == answer['category']
+                if anime['category'] == answer2['category']
         ],
         # Below line is not working due to issue #171 in PyInquirer
         # https://github.com/CITGuru/PyInquirer/issues/171
@@ -60,10 +64,18 @@ def main():
         # 'validate': lambda value: len(value) > 0 or '請選擇最少一個選項！'
     }])
 
+    # Create video directory for saving downloaded videos
+    current_directory = os.getcwd()
+    video_directory = os.path.join(current_directory, r'video', answer2['category'])
+
+    if not os.path.exists(video_directory):
+        os.makedirs(video_directory)
+
+    # Start download
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         executor.map(
             download_video,
-            [anime for anime in anime_list if anime['title'] in answer['episode']]
+            [anime for anime in anime_list if anime['title'] in answer3['episode']]
         )
 
     print('\n== 所有下載已經完成，多謝使用 Anime1.me 下載器 ==')
@@ -191,21 +203,18 @@ def download_video(anime_info):
         if not player_data['l']:
             raise NoVideoFoundError
 
-        # Create video directory for saving downloaded videos
-        current_directory = os.getcwd()
-        video_directory = os.path.join(current_directory, r'video')
-
-        if not os.path.exists(video_directory):
-            os.makedirs(video_directory)
-
         # Get video stream
         video_stream = client.get('https:' + player_data['l'], stream=True)
 
+        if video_stream.status_code != 200:
+            raise NoVideoFoundError
+
         # Save video stream to video directory
         file_name = (player_data['l'].split('/'))[-1]
+        file_path = os.path.join(current_directory, r'video', anime_info["category"], file_name)
         file_size_in_bytes= int(video_stream.headers.get('content-length', 0))
 
-        with open(f'{video_directory}/{anime_info["category"]} - {file_name}', 'wb') as file:
+        with open(file_path, 'wb') as file:
             block_size = 1024
             downloaded_byte = 0
 
@@ -218,6 +227,8 @@ def download_video(anime_info):
         spinner.succeed(f'{anime_info["title"]}: 下載完成')
     except NoVideoFoundError:
         spinner.fail(f'{anime_info["title"]}: 找不到影片地址，略過下載')
+    except VideoStreamConnectionError:
+        spinner.fail(f'{anime_info["title"]}: 無法加載影片，請稍後重試')
     except KeyboardInterrupt:
         spinner.fail('退出程式，取消所有下載')
         sys.exit(0)
