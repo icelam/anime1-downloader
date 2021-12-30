@@ -5,12 +5,16 @@ import sys
 import re
 import concurrent.futures
 from urllib.parse import unquote
+from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup
 from PyInquirer import prompt
 # FIXME: Use pip published version of Halo when #155 is merged
 # https://github.com/manrajgrover/halo/pull/155
 from halo import Halo
+
+# Take environment variables from .env
+load_dotenv()
 
 # Custom exception types
 class Error(Exception):
@@ -65,14 +69,18 @@ def main():
     }])
 
     # Create video directory for saving downloaded videos
-    current_directory = os.getcwd()
-    video_directory = os.path.join(current_directory, r'video', answer2['category'])
+    video_directory = os.path.join(
+        os.getcwd(),
+        os.environ.get('VIDEO_DIRECTORY'),
+        answer2['category']
+    )
 
     if not os.path.exists(video_directory):
         os.makedirs(video_directory)
 
     # Start download
-    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
+    max_parallel_download = int(os.environ.get('MAX_PARALLEL_DOWNLOAD'))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_parallel_download) as executor:
         executor.map(
             download_video,
             [anime for anime in anime_list if anime['title'] in answer3['episode']]
@@ -211,7 +219,12 @@ def download_video(anime_info):
 
         # Save video stream to video directory
         file_name = (player_data['l'].split('/'))[-1]
-        file_path = os.path.join(current_directory, r'video', anime_info["category"], file_name)
+        file_path = os.path.join(
+            os.getcwd(),
+            os.environ.get('VIDEO_DIRECTORY'),
+            anime_info["category"],
+            file_name
+        )
         file_size_in_bytes= int(video_stream.headers.get('content-length', 0))
 
         with open(file_path, 'wb') as file:
