@@ -1,7 +1,7 @@
 # Anime1.me 下載器
 
 ### 預覽
-![預覽](./docs/demo.gif)
+![預覽](./docs/demo-compressed.gif)
 
 ### 使用教學
 
