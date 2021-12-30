@@ -60,7 +60,7 @@ def main():
         # 'validate': lambda value: len(value) > 0 or '請選擇最少一個選項！'
     }])
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         executor.map(
             download_video,
             [anime for anime in anime_list if anime['title'] in answer['episode']]
