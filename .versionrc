@@ -1,0 +1,11 @@
+{
+  "compareUrlFormat": "https://github.com/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
+  "commitUrlFormat": "https://github.com/{{owner}}/{{repository}}/commit/{{hash}}",
+  "issueUrlFormat": "https://github.com/{{owner}}/{{repository}}/issues/{{id}}",
+  "bumpFiles": [
+    {
+      "filename": "anime1download/cli/constants.py",
+      "updater": "scripts/bump-version-constant.js"
+    }
+  ]
+}

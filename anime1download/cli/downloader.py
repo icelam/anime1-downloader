@@ -11,10 +11,11 @@ from cli.exceptions import (
     EmptySearchResultError, NoVideoFoundError, VideoStreamConnectionError
 )
 from cli.scraper import get_search_result, get_video_stream
+from cli.constants import CLI_VERSION
 
 def start():
     """Main entry function that display questions to guide user through the download journey"""
-    print('== 歡迎使用 Anime1.me 下載器 ==\n')
+    print(f'== 歡迎使用 Anime1.me 下載器 v{CLI_VERSION} ==\n')
 
     answer1 = prompt([{
         'type': 'input',
