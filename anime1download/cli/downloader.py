@@ -23,6 +23,9 @@ def start():
         'validate': lambda value: value != '' or '請輸入搜尋關鍵字！'
     }])
 
+    if not answer1:
+        sys.exit(0)
+
     anime_list = search_anime(answer1['keyword'])
     category_list = list({category for category in [anime['category'] for anime in anime_list]})
 
@@ -32,6 +35,9 @@ def start():
         'message': '你想下載哪一套動畫？',
         'choices': category_list
     }])
+
+    if not answer2:
+        sys.exit(0)
 
     answer3 = prompt([{
         'type': 'checkbox',
@@ -46,6 +52,9 @@ def start():
         # FIXME: Consider switching to python-inquirer when python-inquirer's issue #115 is resolved
         # 'validate': lambda value: len(value) > 0 or '請選擇最少一個選項！'
     }])
+
+    if not answer3:
+        sys.exit(0)
 
     # Create video directory for saving downloaded videos
     video_directory = os.path.join(
