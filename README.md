@@ -1,9 +1,14 @@
 # Anime1.me 下載器
 
+![Python 3.9.9](https://img.shields.io/badge/python-3.9.9-blue.svg?logo=python&logoColor=white)
+
 ### 預覽
 ![預覽](./docs/demo-compressed.gif)
 
 ### 使用教學
+
+#### 安裝 Python
+本程式使用 Python 3 進行開發，使用前請先確保 Python 3 已正確安裝。
 
 #### 利用 Virtualenv 建立 Python 虛擬環境
 ```bash
