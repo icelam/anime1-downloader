@@ -1,0 +1,8 @@
+pylint==2.12.2
+requests==2.26.0
+beautifulsoup4==4.10.0
+# halo==0.0.31
+git+git://github.com/frostming/halo/@multiple-spinners#egg=halo
+PyInquirer==1.0.3
+python-dotenv==0.19.2
+pyinstaller==4.7

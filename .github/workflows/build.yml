@@ -1,0 +1,31 @@
+name: Build
+on:
+  push:
+    branches-ignore:
+      - 'master'
+    tags-ignore:
+      - '**' # prevent double build on release tag
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Setup Python version
+        uses: actions/setup-python@main
+        with:
+          python-version: 3.9.9
+      - name: Create build
+        run: |
+          pip install virtualenv
+          make create-venv
+          make build
+      - name: Preserve build as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: anime1download-${{ matrix.os }}
+          path: ./dist/*
+

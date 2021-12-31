@@ -1,0 +1,1122 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /git/
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 72
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 18
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 80
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 500
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: solid
+    title: null
+    style:
+      boxShadow: none
+      margin: 0px
+      border: 0px
+      borderRadius: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 11
+    content: "\e]7;file://No-Name.lan/git/\a$ "
+  - delay: 3810
+    content: python anime1download
+  - delay: 637
+    content: "\r\n"
+  - delay: 253
+    content: "== 歡迎使用 Anime1.me 下載器 ==\r\n\e[0m\r\n"
+  - delay: 13
+    content: "\e[?1l\e[6n\e[0m\e[?2004h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m 請輸入搜尋關鍵字（例如：刀劍神域）  \e[38D\e[38C\e[0m\e[?12l\e[?25h"
+  - delay: 7
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[15A\e[38C\e[0m\e[?12l\e[?25h"
+  - delay: 1677
+    content: "\e[?25l\e[0;38;5;214;1mS\e[0m\e[?12l\e[?25h"
+  - delay: 173
+    content: "\e[?25l\e[0;38;5;214;1mS\e[0m\e[?12l\e[?25h"
+  - delay: 140
+    content: "\e[?25l\e[0;38;5;214;1mS\e[0m\e[?12l\e[?25h"
+  - delay: 139
+    content: "\e[?25l\e[0;38;5;214;1mS\e[0m\e[?12l\e[?25h"
+  - delay: 211
+    content: "\e[?25l\e[42D\e[0m\e[J\e[0;38;5;67m?\e[0;1m 請輸入搜尋關鍵字（例如：刀劍神域）  \e[0;38;5;214;1mSSSS\e[42D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?2004l\e[?25l\e[0m\r\e[1m\e[36m⠋\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 86
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 86
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m 搜尋中，請耐心等候⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\e[0m\e[?25h\e[0m\e[32m✔\e[39m 搜尋完成！\r\n\e[0m"
+  - delay: 12
+    content: "\e[?1l\e[6n\e[0m\e[?2004h\e[?1000h\e[?1015h\e[?1006h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m 你想下載哪一套動畫？ \e[0m (Use arrow keys)\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mSSSS.DYNAZENON\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[15D\e[2A\e[0m"
+  - delay: 10
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[13A\e[0m"
+  - delay: 784
+    content: "\e[?25l\e[0m\r\r\n\e[0m \e[0m \e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mD\e[0mY\e[0mN\e[0mA\e[0mZ\e[0mE\e[0mN\e[0mO\e[0mN\e[0m\r\r\n\e[0;38;5;214;1m ❯ \e[0mSSSS.GRIDMAN\e[2A\e[15D\e[0m"
+  - delay: 987
+    content: "\e[?25l\e[0m\e[J\e[0;38;5;67m?\e[0;1m 你想下載哪一套動畫？ \e[0;38;5;214;1m SSSS.GRIDMAN\e[36D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?1000l\e[?1015l\e[?1006l\e[?2004l"
+  - delay: 11
+    content: "\e[?1l\e[6n\e[?2004h\e[?1000h\e[?1015h\e[?1006h\e[?25l\e[?7l\e[0m\e[0m\e[J\e[0;38;5;67m?\e[0;1m 請選擇要下載的集數 \e[0m (<up>, <down> to move, <space> to select, <a> to toggle, \r\e[79C<\e[0m\r\r\n\e[0;38;5;214;1m ❯\e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m1\e[0m2\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m1\e[0m1\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m1\e[0m0\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m9\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m8\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m7\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m6\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m5\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m4\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m3\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m2\e[0m]\e[0m\r\r\n\e[0m \e[0m \e[0m○\e[0m \e[0mS\e[0mS\e[0mS\e[0mS\e[0m.\e[0mG\e[0mR\e[0mI\e[0mD\e[0mM\e[0mA\e[0mN\e[0m \e[0m[\e[0m0\e[0m1\e[0m]\e[21D\e[12A\e[0m"
+  - delay: 20
+    content: "\e[?25l\e[0m"
+  - delay: 382
+    content: "\e[?25l\e[0m\r\r\n\e[0m \e[0m \e[0m\r\r\n\e[0;38;5;214;1m ❯\e[2A\e[2D\e[0m"
+  - delay: 197
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\e[0m \e[0m \e[0m\r\r\n\e[0;38;5;214;1m ❯\e[3A\e[2D\e[0m"
+  - delay: 188
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\e[0m \e[0m \e[0m\r\r\n\e[0;38;5;214;1m ❯\e[4A\e[2D\e[0m"
+  - delay: 198
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\e[0m \e[0m \e[0m\r\r\n\e[0;38;5;214;1m ❯\e[5A\e[2D\e[0m"
+  - delay: 341
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[2C\e[0m● \e[5A\e[4D\e[0m"
+  - delay: 301
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[0m \e[0m \e[0m\r\r\n\e[0;38;5;214;1m ❯\e[6A\e[2D\e[0m"
+  - delay: 416
+    content: "\e[?25l\e[0m\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\r\r\n\e[2C\e[0m● \e[6A\e[4D\e[0m"
+  - delay: 1608
+    content: "\e[?25l\e[0m\e[J\e[0;38;5;67m?\e[0;1m 請選擇要下載的集數 \e[0;38;5;214;1m done (2 selections)\e[41D\e[0m\r\r\n\e[J\e[?7h\e[0m\e[?12l\e[?25h\e[?1000l\e[?1015l\e[?1006l\e[?2004l\e[?25l\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[?25l\e[0m\e[0m\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 開始下載⋯⋯\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 開始下載⋯⋯\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：0%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：0%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：1%）\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：1%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：1%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：1%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：1%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：1%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：1%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：1%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：1%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：1%）\r\n\e[0m"
+  - delay: 70
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：1%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：1%）\r\n"
+  - delay: 13
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：2%）\r\n\e[0m"
+  - delay: 70
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：2%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：2%）\r\n"
+  - delay: 14
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：2%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：2%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：2%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：3%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：2%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：3%）\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：3%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：3%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：3%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：4%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：4%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：4%）\r\n"
+  - delay: 12
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：5%）\r\n\e[0m"
+  - delay: 70
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：4%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：5%）\r\n"
+  - delay: 12
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：5%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：5%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：5%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：6%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：5%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：6%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：6%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：6%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：6%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：7%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：6%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：7%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：8%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：7%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：8%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：8%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：7%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：8%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：9%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：7%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：9%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：9%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：8%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：9%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：9%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：8%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：9%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：10%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：9%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：10%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：10%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：9%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：10%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：11%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：10%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：11%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：11%）\r\n\e[0m"
+  - delay: 70
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：10%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：11%）\r\n"
+  - delay: 13
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：12%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：11%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：12%）\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：12%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：11%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：12%）\r\n"
+  - delay: 12
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：13%）\r\n\e[0m"
+  - delay: 69
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：12%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：13%）\r\n"
+  - delay: 13
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：13%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：12%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：13%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：14%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：13%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：14%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：15%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：13%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：15%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：15%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：14%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：15%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：16%）\r\n\e[0m"
+  - delay: 70
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：14%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：16%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：16%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：14%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：16%）\r\n"
+  - delay: 12
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：17%）\r\n\e[0m"
+  - delay: 69
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：15%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：17%）\r\n"
+  - delay: 15
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：17%）\r\n\e[0m"
+  - delay: 69
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：15%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：17%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：17%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：15%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：17%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：18%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：16%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：18%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：18%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：16%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：18%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：19%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：17%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：19%）\r\n"
+  - delay: 13
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：19%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：17%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：19%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：19%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：17%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：19%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：18%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：18%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：19%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：19%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：19%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：20%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：21%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：20%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：21%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：21%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：20%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：21%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：22%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：21%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：22%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：23%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：21%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：23%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：23%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：22%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：23%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：24%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：22%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：24%）\r\n"
+  - delay: 12
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：24%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：22%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：24%）\r\n"
+  - delay: 13
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：24%）\r\n\e[0m"
+  - delay: 69
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：23%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：24%）\r\n"
+  - delay: 16
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：25%）\r\n\e[0m"
+  - delay: 67
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：23%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：25%）\r\n"
+  - delay: 17
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：25%）\r\n\e[0m"
+  - delay: 66
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：24%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：25%）\r\n"
+  - delay: 17
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：26%）\r\n\e[0m"
+  - delay: 67
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：24%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：26%）\r\n"
+  - delay: 13
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：27%）\r\n\e[0m"
+  - delay: 69
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：25%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：27%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：27%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：25%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：27%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：28%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：26%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：28%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：28%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：26%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：28%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：29%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：27%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：29%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：29%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：27%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：29%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：30%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：28%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：30%）\r\n"
+  - delay: 13
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：30%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：28%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：30%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：31%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：29%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：31%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：31%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：29%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：31%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：32%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：30%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：32%）\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：32%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：30%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：32%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：33%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：31%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：33%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：33%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：31%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：33%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：34%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：32%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：34%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：34%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：32%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：34%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：35%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：32%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：35%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：35%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：33%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：35%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：36%）\r\n\e[0m"
+  - delay: 73
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：33%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：36%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：36%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：33%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：36%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：36%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：34%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：36%）\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：37%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：34%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：37%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：38%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：35%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：38%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：38%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：35%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：38%）\r\n"
+  - delay: 11
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：39%）\r\n\e[0m"
+  - delay: 71
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：36%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：39%）\r\n"
+  - delay: 13
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：39%）\r\n\e[0m"
+  - delay: 72
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：36%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：39%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：40%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：37%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：40%）\r\n"
+  - delay: 10
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：40%）\r\n\e[0m"
+  - delay: 74
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：37%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：40%）\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：40%）\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：37%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：40%）\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：40%）\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：37%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：40%）\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：41%）\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：37%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：41%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：41%）\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：38%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：41%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：41%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：38%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：41%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：42%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：39%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：42%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：42%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：39%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：42%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：43%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：39%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：43%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：43%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：40%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：43%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：43%）\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：40%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：43%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：44%）\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：40%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：44%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：44%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：45%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：41%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：45%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：45%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：41%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：45%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：45%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：42%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：45%）\r\n"
+  - delay: 87
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：42%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：45%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：46%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：43%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：46%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：47%）\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：43%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：47%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：47%）\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：44%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：47%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：47%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：48%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：44%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：48%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：44%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：48%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：48%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：45%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：45%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：46%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：47%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：47%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：48%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：48%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：49%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：49%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：50%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：50%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：49%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：50%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：49%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：50%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：51%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：49%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：51%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：52%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：49%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：52%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：52%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：49%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：52%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：53%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：49%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：53%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：53%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：49%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：53%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：54%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：50%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：54%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：54%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：50%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：54%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：55%）\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：51%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：55%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：56%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：51%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：56%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：56%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：52%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：56%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：57%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：52%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：57%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：57%）\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：53%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：57%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：58%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：53%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：58%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：58%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：54%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：58%）\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：59%）\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：54%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：59%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：59%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：54%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：59%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：59%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：55%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：59%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：60%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：55%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：60%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：60%）\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：55%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：60%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：60%）\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：56%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：60%）\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：61%）\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：56%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：61%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：61%）\r\n\e[0m"
+  - delay: 79
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：57%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：61%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：62%）\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：57%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：62%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：62%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：57%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：62%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：62%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：58%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：62%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：63%）\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：58%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：63%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：63%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：58%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：63%）\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：63%）\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：58%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：63%）\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：64%）\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：59%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：64%）\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：64%）\r\n\e[0m"
+  - delay: 78
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：59%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：64%）\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：65%）\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：59%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：65%）\r\n"
+  - delay: 9
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：65%）\r\n\e[0m"
+  - delay: 75
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：60%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：65%）\r\n"
+  - delay: 6
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：66%）\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：61%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：66%）\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：66%）\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：61%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：66%）\r\n"
+  - delay: 7
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：66%）\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：61%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：66%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：62%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：62%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：62%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：62%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：62%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：67%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：68%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：63%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：68%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：69%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：69%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：63%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：69%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：70%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：64%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：70%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：70%）\r\n"
+  - delay: 5
+    content: "\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：64%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：70%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：70%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：64%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：70%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：71%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：65%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：71%）\r\n"
+  - delay: 79
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：71%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：65%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：71%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：72%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：65%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：72%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：72%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：66%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：72%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：73%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：66%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：73%）\r\n"
+  - delay: 79
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：73%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：67%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：73%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：67%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：73%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：74%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：74%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：68%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：74%）\r\n"
+  - delay: 85
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：74%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：68%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：74%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：75%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：68%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：75%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：75%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：69%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：75%）\r\n"
+  - delay: 78
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：76%）\r\n\e[0m"
+  - delay: 5
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：69%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：76%）\r\n"
+  - delay: 74
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：76%）\r\n\e[0m"
+  - delay: 8
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：70%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：76%）\r\n"
+  - delay: 75
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：76%）\r\n\e[0m"
+  - delay: 5
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：70%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：76%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：76%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：70%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：76%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：77%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：70%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：77%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：77%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：70%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：77%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：77%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：71%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：77%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：78%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：71%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：78%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：78%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：72%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：78%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：79%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：72%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：79%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：79%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：72%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：79%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：80%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：73%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：80%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：80%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：73%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：80%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：74%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：80%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：81%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：74%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：81%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：81%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：74%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：81%）\r\n"
+  - delay: 8
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：81%）\r\n\e[0m"
+  - delay: 76
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：75%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：81%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：82%）\r\n\e[0m"
+  - delay: 77
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：75%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：82%）\r\n"
+  - delay: 5
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：82%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：75%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：82%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：82%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：75%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：82%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：75%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：76%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：76%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：76%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：77%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：83%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：84%）\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：77%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：84%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：84%）\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：77%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：84%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：85%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：78%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：85%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：85%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：78%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：85%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：85%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：78%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：85%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：86%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：78%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：86%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：86%）\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：79%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：86%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：86%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：79%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：86%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：86%）\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：79%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：79%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：79%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：80%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n\e[0m"
+  - delay: 81
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：80%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：80%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：87%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：88%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：81%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：88%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：88%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：81%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：88%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：89%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：81%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：89%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：89%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：82%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：89%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：89%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：90%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：82%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：90%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：90%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：82%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：90%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：90%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：83%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：90%）\r\n"
+  - delay: 81
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：91%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：83%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：91%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：91%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：83%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：91%）\r\n"
+  - delay: 79
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：91%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：83%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：91%）\r\n"
+  - delay: 79
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：91%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：84%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：91%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：92%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：84%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：92%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：92%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：84%）\r\n\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：92%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：92%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：84%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：92%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：93%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：85%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：93%）\r\n"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：93%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：85%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：93%）\r\n"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：86%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：93%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：94%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：86%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：94%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：94%）\r\n\e[0m"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：87%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：94%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：95%）\r\n\e[0m"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：87%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：95%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：95%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：87%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：95%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：96%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：88%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：96%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：96%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：88%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：96%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：97%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：97%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：89%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：97%）\r\n"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：90%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：97%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：90%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：91%）\r\n\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：91%）\r\n\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：92%）\r\n\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 82
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：92%）\r\n\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：93%）\r\n\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：93%）\r\n\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：94%）\r\n\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：98%）\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：99%）\r\n\e[0m\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：94%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：99%）\r\n"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：95%）\r\n\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：99%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：99%）\r\n\e[0m"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠙\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：95%）\r\n\e[0m\r\e[1m\e[36m⠋\e[0m SSSS.GRIDMAN [07]: 正在下載（進度：99%）\r\n\e[0m\e[1A\e[0m\e[J\e[0m\e[0m\e[?25h\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n\e[0m"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠹\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：95%）\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠸\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：96%）\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠼\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：97%）\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 85
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠴\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：97%）\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠦\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：98%）\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠧\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：98%）\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 83
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠇\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：99%）\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 84
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\r\e[1m\e[36m⠏\e[0m SSSS.GRIDMAN [08]: 正在下載（進度：99%）\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 80
+    content: "\e[0m\e[2A\e[0m\e[J\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n\e[0m\e[?25h\e[0m\e[1A\e[0m\e[J\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [08]: 下載完成\r\n\e[0m\e[32m✔\e[39m SSSS.GRIDMAN [07]: 下載完成\r\n"
+  - delay: 7
+    content: "\e[0m\r\n== 所有下載已經完成，多謝使用 Anime1.me 下載器 ==\e[0m\r\n\e[0m\e[0m"
