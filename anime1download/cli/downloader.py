@@ -28,7 +28,7 @@ def start():
         sys.exit(0)
 
     anime_list = search_anime(answer1['keyword'])
-    category_list = list({category for category in [anime['category'] for anime in anime_list]})
+    category_list = list(set([anime['category'] for anime in anime_list]))
 
     answer2 = prompt([{
         'type': 'list',
