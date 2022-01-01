@@ -1,5 +1,8 @@
 # Anime1.me 下載器
 
+[![Latest version](https://img.shields.io/github/v/release/icelam/anime1-downloader.svg?sort=semver&label=latest)](https://github.com/icelam/anime1-downloader/releases)
+![Build](https://github.com/icelam/anime1-downloader/actions/workflows/build.yml/badge.svg)
+![Release](https://github.com/icelam/anime1-downloader/actions/workflows/release.yml/badge.svg)
 ![Python 3.9.9](https://img.shields.io/badge/python-3.9.9-blue.svg?logo=python&logoColor=white)
 
 ### 預覽
