@@ -6,7 +6,22 @@ on:
     tags-ignore:
       - '**' # prevent double build on release tag
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Setup Python version
+        uses: actions/setup-python@main
+        with:
+          python-version: 3.9.9
+      - name: Run unit test
+        run: |
+          pip install virtualenv
+          make create-venv
+          make test
   build:
+    needs: [test]
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
