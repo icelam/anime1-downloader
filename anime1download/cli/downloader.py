@@ -93,7 +93,7 @@ def search_anime(keyword):
     except EmptySearchResultError:
         spinner.fail('抱歉，您輸入的關鍵字找不到任何東西！')
         sys.exit(0)
-    except BaseException as error:
+    except Exception as error:
         spinner.fail(f'抱歉，搜尋過程中出現了未知錯誤 (除錯訊息：{error=}, {type(error)=})')
         raise
 
@@ -137,5 +137,5 @@ def download_video(anime_info):
     except KeyboardInterrupt:
         spinner.fail('退出程式，取消所有下載')
         sys.exit(0)
-    except BaseException as error:
+    except Exception as error:
         spinner.fail(f'{anime_info["title"]}: 下載過程中出現了未知錯誤，請稍後重試 (除錯訊息：{error=}, {type(error)=})')
