@@ -89,7 +89,7 @@ def get_video_stream(video_detail_url):
         data={ 'd': unquote(player_data, 'utf-8') }
     ).json()
 
-    if not video_file_info['l']:
+    if not 'l' in video_file_info.keys():
         return None
 
     # Get video stream
