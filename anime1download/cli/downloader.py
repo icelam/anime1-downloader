@@ -11,10 +11,11 @@ from cli.exceptions import (
     EmptySearchResultError, NoVideoFoundError, VideoStreamConnectionError
 )
 from cli.scraper import get_search_result, get_video_stream
+from cli.constants import CLI_VERSION
 
 def start():
     """Main entry function that display questions to guide user through the download journey"""
-    print('== 歡迎使用 Anime1.me 下載器 ==\n')
+    print(f'== 歡迎使用 Anime1.me 下載器 v{CLI_VERSION} ==\n')
 
     answer1 = prompt([{
         'type': 'input',
@@ -27,7 +28,7 @@ def start():
         sys.exit(0)
 
     anime_list = search_anime(answer1['keyword'])
-    category_list = list({category for category in [anime['category'] for anime in anime_list]})
+    category_list = list(set([anime['category'] for anime in anime_list]))
 
     answer2 = prompt([{
         'type': 'list',
@@ -92,7 +93,7 @@ def search_anime(keyword):
     except EmptySearchResultError:
         spinner.fail('抱歉，您輸入的關鍵字找不到任何東西！')
         sys.exit(0)
-    except BaseException as error:
+    except Exception as error:
         spinner.fail(f'抱歉，搜尋過程中出現了未知錯誤 (除錯訊息：{error=}, {type(error)=})')
         raise
 
@@ -136,5 +137,5 @@ def download_video(anime_info):
     except KeyboardInterrupt:
         spinner.fail('退出程式，取消所有下載')
         sys.exit(0)
-    except BaseException as error:
+    except Exception as error:
         spinner.fail(f'{anime_info["title"]}: 下載過程中出現了未知錯誤，請稍後重試 (除錯訊息：{error=}, {type(error)=})')
