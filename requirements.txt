@@ -6,3 +6,4 @@ git+git://github.com/frostming/halo/@multiple-spinners#egg=halo
 PyInquirer==1.0.3
 python-dotenv==0.19.2
 pyinstaller==4.7
+responses==0.16.0

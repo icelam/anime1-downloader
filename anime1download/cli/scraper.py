@@ -73,7 +73,7 @@ def get_player_data(player_url):
     """Get player data from player"""
     player_html = requests.get(player_url).text
     data = re.findall(r'x\.send\(\'d=(.+)\'\)', player_html)
-    return data[0] if data else None
+    return unquote(data[0], 'utf-8') if data else None
 
 def get_video_stream(video_detail_url):
     player_url = get_player_url(video_detail_url)
@@ -86,7 +86,7 @@ def get_video_stream(video_detail_url):
     client = requests.session()
     video_file_info = client.post(
         'https://v.anime1.me/api',
-        data={ 'd': unquote(player_data, 'utf-8') }
+        data={ 'd': player_data }
     ).json()
 
     if not 'l' in video_file_info.keys():

@@ -2,6 +2,7 @@
 
 VENV_ACTIVATE_PATH=venv/bin/activate
 SRC_FOLDER=anime1download
+TEST_FOLDER=tests
 
 # Init new virtual environment
 create-venv:
@@ -12,20 +13,29 @@ clean-venv:
 	rm -rf venv
 
 # Test in virtual environment
-test-with-venv:
+start:
 	( \
 		. ${VENV_ACTIVATE_PATH}; \
 		pip install -r requirements.txt; \
 		python ${SRC_FOLDER} \
-  )
+	)
+
+# Run unit test
+test:
+	( \
+		. ${VENV_ACTIVATE_PATH}; \
+		pip install -r requirements.txt; \
+		python -m unittest discover ${TEST_FOLDER} \
+	)
+
 
 # Run pylint checking
 lint:
 	( \
 		. ${VENV_ACTIVATE_PATH}; \
 		pip install -r requirements.txt; \
-		pylint ${SRC_FOLDER} \
-  )
+		pylint ${SRC_FOLDER} ${TEST_FOLDER} \
+	)
 
 # Build for distribution
 build:
@@ -34,7 +44,7 @@ build:
 		. ${VENV_ACTIVATE_PATH}; \
 		pip install -r requirements.txt; \
 		pyinstaller --log-level DEBUG --onefile ${SRC_FOLDER}/__main__.py --name ${SRC_FOLDER} \
-  )
+	)
 
 # Create the first release
 first-release:
