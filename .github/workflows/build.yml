@@ -15,10 +15,15 @@ jobs:
         uses: actions/setup-python@main
         with:
           python-version: 3.9.9
+      - name: Install pipenv
+        run: |
+          pip install pipenv
+      - name: Create virtual environment
+        run: |
+          make create-venv
+          make install-ci
       - name: Run unit test
         run: |
-          pip install virtualenv
-          make create-venv
           make test
   build:
     needs: [test]
@@ -33,10 +38,15 @@ jobs:
         uses: actions/setup-python@main
         with:
           python-version: 3.9.9
+      - name: Install pipenv
+        run: |
+          pip install pipenv
+      - name: Create virtual environment
+        run: |
+          make create-venv
+          make install-ci
       - name: Create build
         run: |
-          pip install virtualenv
-          make create-venv
           make build
       - name: Preserve build as artifact
         uses: actions/upload-artifact@v2
