@@ -28,12 +28,33 @@ jobs:
         run: |
           # force continue on pylint error with exit 0
           make lint-ci || exit 0
-      - name: Annotate Pylint results
+      - name: Generate annotations JSON
         run: |
-          jq -r '(.[] | "::warning file=" + (.path) + ",line=" + (.line | tostring) + ",col=" + (.column | tostring) + "::" + (."message-id") + ": " + (.message) + " (" + (.symbol) + ")")' reports/pylint.json | \
-          while read i; do
-              echo $i;
-          done
+          jq '([
+            map(
+              select(.type != "error").type = "warning"
+              | select(.type == "error").type = "failure"
+              | .message = (."message-id") + ": " + (.message) + " (" + (.symbol) + ")"
+              | .endLine = .line
+              | .endColumn = .column
+              | with_entries(
+                if .key == "type" then .key = "annotation_level" else . end
+                | if .key == "line" then .key = "start_line" else . end
+                | if .key == "endLine" then .key = "end_line" else . end
+                | if .key == "column" then .key = "start_column" else . end
+                | if .key == "endColumn" then .key = "end_column" else . end
+                | if .key == "path" then .key = "file" else . end
+              )
+            )
+            | .[]
+            | del(.obj, .module, ."message-id", .symbol)
+          ])' reports/pylint.json > reports/annotations.json
+      - name: Annotate Pylint results
+        uses: yuzutech/annotations-action@v0.4.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          title: Pylint
+          input: ./reports/annotations.json
       - name: Run unit test
         run: |
           make test

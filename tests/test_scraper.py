@@ -38,7 +38,6 @@ class TestGetSearchResult(unittest.TestCase):
     """Test for get_search_result()"""
     def setUp(self):
         """Configure test and mock request response"""
-        # pylint: disable-next=invalid-name
         self.maxDiff = None
 
         responses.add(
@@ -227,7 +226,6 @@ class TestExtractSearchResult(unittest.TestCase):
     """Test for extract_search_results()"""
     def setUp(self):
         """Configure test"""
-        # pylint: disable-next=invalid-name
         self.maxDiff = None
 
     def test_extract_search_results(self):
