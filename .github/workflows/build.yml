@@ -1,8 +1,10 @@
 name: Build
 on:
+  pull_request:
+    types: [opened, synchronize, reopened]
   push:
-    branches-ignore:
-      - 'master'
+    branches:
+      - 'develop'
     tags-ignore:
       - '**' # prevent double build on release tag
 jobs:
@@ -22,6 +24,16 @@ jobs:
         run: |
           make create-venv
           make install-ci
+      - name: Run Pylint
+        run: |
+          # force continue on pylint error with exit 0
+          make lint-ci || exit 0
+      - name: Annotate Pylint results
+        run: |
+          jq -r '(.[] | "::warning file=" + (.path) + ",line=" + (.line | tostring) + ",col=" + (.column | tostring) + "::" + (."message-id") + ": " + (.message) + " (" + (.symbol) + ")")' reports/pylint.json | \
+          while read i; do
+              echo $i;
+          done
       - name: Run unit test
         run: |
           make test

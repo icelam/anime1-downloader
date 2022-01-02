@@ -32,6 +32,13 @@ test:
 lint:
 	pipenv run pylint ${SRC_FOLDER} ${TEST_FOLDER}
 
+# Run pylint checking on ci
+lint-ci:
+	( \
+		mkdir -p reports; \
+		pipenv run pylint ${SRC_FOLDER} ${TEST_FOLDER} --output-format=json --output=reports/pylint.json; \
+	)
+
 # Build for distribution
 build:
 	( \
