@@ -90,14 +90,14 @@ def search_anime(keyword):
             raise EmptySearchResultError
 
         spinner.succeed('搜尋完成！')
+
+        return animes
     except EmptySearchResultError:
         spinner.fail('抱歉，您輸入的關鍵字找不到任何東西！')
         sys.exit(0)
     except Exception as error:
         spinner.fail(f'抱歉，搜尋過程中出現了未知錯誤 (除錯訊息：{error=}, {type(error)=})')
-        raise
-
-    return animes
+        sys.exit(1)
 
 def download_video(anime_info):
     """Retrieve player url and save the video file to disk storage"""
