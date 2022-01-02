@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/icelam/anime1-downloader/compare/v1.1.0...v1.1.1) (2022-01-02)
+
+
+### Bug Fixes
+
+* enhance exception handling for network errors ([#5](https://github.com/icelam/anime1-downloader/issues/5)) ([c3d0e03](https://github.com/icelam/anime1-downloader/commit/c3d0e037b19d58364ece2158968e6bca18d869ea))
+
 ## [1.1.0](https://github.com/icelam/anime1-downloader/compare/v1.0.0...v1.1.0) (2022-01-01)
 
 
