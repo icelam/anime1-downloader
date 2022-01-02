@@ -3,7 +3,7 @@
 [![Latest version](https://img.shields.io/github/v/release/icelam/anime1-downloader.svg?sort=semver&label=latest)](https://github.com/icelam/anime1-downloader/releases)
 ![Build](https://github.com/icelam/anime1-downloader/actions/workflows/build.yml/badge.svg)
 ![Release](https://github.com/icelam/anime1-downloader/actions/workflows/release.yml/badge.svg)
-![Python 3.9.9](https://img.shields.io/badge/python-3.9.9-blue.svg?logo=python&logoColor=white)
+![Python Version](https://img.shields.io/github/pipenv/locked/python-version/icelam/anime1-downloader)
 
 ### 預覽
 ![預覽](./docs/demo-compressed.gif)
@@ -13,21 +13,20 @@
 #### 安裝 Python
 本程式使用 Python 3 進行開發，使用前請先確保 Python 3 已正確安裝。
 
-#### 利用 Virtualenv 建立 Python 虛擬環境
+#### 利用 pipenv 建立 Python 虛擬環境
 ```bash
-# 假設用戶已預先安裝好 virtualenv 套件，如未安裝請先運行 pip3 install virtualenv
-virtualenv venv --python=python3
+# 假設用戶已預先安裝好 pipenv 套件，如未安裝請先運行 pip3 install pipenv
+pipenv --python 3.9.9
 ```
 
-#### 啟動虛擬環境及安裝所需套件
+#### 安裝所需套件
 ```bash
-. venv/bin/activate
-pip install -r requirements.txt
+pipenv install --dev
 ```
 
-#### 運行主程式
+#### 在虛擬環境運行主程式
 ```bash
-python anime1download
+pipenv run python anime1download
 ```
 
 ### 聲明
