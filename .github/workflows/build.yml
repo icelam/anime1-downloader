@@ -1,8 +1,10 @@
 name: Build
 on:
+  pull_request:
+    types: [opened, synchronize, reopened]
   push:
-    branches-ignore:
-      - 'master'
+    branches:
+      - 'develop'
     tags-ignore:
       - '**' # prevent double build on release tag
 jobs:
@@ -15,10 +17,46 @@ jobs:
         uses: actions/setup-python@main
         with:
           python-version: 3.9.9
+      - name: Install pipenv
+        run: |
+          pip install pipenv
+      - name: Create virtual environment
+        run: |
+          make create-venv
+          make install-ci
+      - name: Run Pylint
+        run: |
+          # force continue on pylint error with exit 0
+          make lint-ci || exit 0
+      - name: Generate annotations JSON
+        run: |
+          jq '([
+            map(
+              select(.type != "error").type = "warning"
+              | select(.type == "error").type = "failure"
+              | .message = (."message-id") + ": " + (.message) + " (" + (.symbol) + ")"
+              | .endLine = .line
+              | .endColumn = .column
+              | with_entries(
+                if .key == "type" then .key = "annotation_level" else . end
+                | if .key == "line" then .key = "start_line" else . end
+                | if .key == "endLine" then .key = "end_line" else . end
+                | if .key == "column" then .key = "start_column" else . end
+                | if .key == "endColumn" then .key = "end_column" else . end
+                | if .key == "path" then .key = "file" else . end
+              )
+            )
+            | .[]
+            | del(.obj, .module, ."message-id", .symbol)
+          ])' reports/pylint.json > reports/annotations.json
+      - name: Annotate Pylint results
+        uses: yuzutech/annotations-action@v0.4.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          title: Pylint
+          input: ./reports/annotations.json
       - name: Run unit test
         run: |
-          pip install virtualenv
-          make create-venv
           make test
   build:
     needs: [test]
@@ -33,10 +71,15 @@ jobs:
         uses: actions/setup-python@main
         with:
           python-version: 3.9.9
+      - name: Install pipenv
+        run: |
+          pip install pipenv
+      - name: Create virtual environment
+        run: |
+          make create-venv
+          make install-ci
       - name: Create build
         run: |
-          pip install virtualenv
-          make create-venv
           make build
       - name: Preserve build as artifact
         uses: actions/upload-artifact@v2

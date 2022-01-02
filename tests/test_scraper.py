@@ -1,5 +1,7 @@
 """Unit tests for scraper functions"""
 
+# pylint: disable=line-too-long
+
 import os
 from pathlib import Path
 import unittest
@@ -18,7 +20,7 @@ def get_mock_response(file_name):
     file_path = os.path.join(
         os.getcwd(), 'tests', 'mocks', file_name
     )
-    return Path(file_path, encoding='utf8').read_text()
+    return Path(file_path).read_text(encoding='utf8')
 
 search_result_mock_response = get_mock_response('search-result-single-page.html')
 search_result_paginatated_mock_response_1 = get_mock_response('search-result-multiple-page-1.html')

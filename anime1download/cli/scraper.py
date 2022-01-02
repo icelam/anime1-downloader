@@ -1,9 +1,9 @@
 """Scraper functions for Anime1.me downloader"""
 
 import re
+from urllib.parse import unquote
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import unquote
 
 def get_search_result(keyword):
     """Loop through all pages of search result on Anime1.me """
@@ -76,6 +76,7 @@ def get_player_data(player_url):
     return unquote(data[0], 'utf-8') if data else None
 
 def get_video_stream(video_detail_url):
+    """Get video stream and file info from mp4 link"""
     player_url = get_player_url(video_detail_url)
     player_data = get_player_data(player_url) if player_url is not None else None
 
@@ -93,7 +94,7 @@ def get_video_stream(video_detail_url):
         return None
 
     # Get video stream
-    video_stream = client.get('https:' + video_file_info['l'], stream=True)
+    video_stream = client.get('https:' + video_file_info['l'], stream=True, timeout=60)
 
     return {
         'stream': video_stream,
