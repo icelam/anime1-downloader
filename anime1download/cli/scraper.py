@@ -94,7 +94,7 @@ def get_video_stream(video_detail_url):
         return None
 
     # Get video stream
-    video_stream = client.get('https:' + video_file_info['l'], stream=True)
+    video_stream = client.get('https:' + video_file_info['l'], stream=True, timeout=60)
 
     return {
         'stream': video_stream,
