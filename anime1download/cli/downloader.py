@@ -3,6 +3,7 @@
 import os
 import sys
 import concurrent.futures
+import configparser
 from PyInquirer import prompt
 # FIXME: Use pip published version of Halo when #155 is merged
 # https://github.com/manrajgrover/halo/pull/155
@@ -12,6 +13,11 @@ from cli.exceptions import (
 )
 from cli.scraper import get_search_result, get_video_stream
 from cli.constants import CLI_VERSION
+
+# Load configurations
+config = configparser.ConfigParser()
+config_path = os.path.join(os.getcwd(), 'config.ini')
+config.read(config_path)
 
 def start():
     """Main entry function that display questions to guide user through the download journey"""
@@ -60,7 +66,7 @@ def start():
     # Create video directory for saving downloaded videos
     video_directory = os.path.join(
         os.getcwd(),
-        os.environ.get('VIDEO_DIRECTORY'),
+        config.get('CLI', 'VIDEO_DIRECTORY'),
         answer2['category']
     )
 
@@ -68,7 +74,7 @@ def start():
         os.makedirs(video_directory)
 
     # Start download
-    max_parallel_download = int(os.environ.get('MAX_PARALLEL_DOWNLOAD'))
+    max_parallel_download = int(config.get('CLI', 'MAX_PARALLEL_DOWNLOAD'))
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_parallel_download) as executor:
         executor.map(
             download_video,
@@ -114,7 +120,7 @@ def download_video(anime_info):
         # Save video stream to video directory
         file_path = os.path.join(
             os.getcwd(),
-            os.environ.get('VIDEO_DIRECTORY'),
+            config.get('CLI', 'VIDEO_DIRECTORY'),
             anime_info["category"],
             video_stream_info['file_name']
         )
