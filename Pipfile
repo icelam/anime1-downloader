@@ -7,7 +7,6 @@ name = "pypi"
 beautifulsoup4 = "==4.10.0"
 halo = {ref = "multiple-spinners", git = "git://github.com/frostming/halo/"}
 pyinquirer = "==1.0.3"
-python-dotenv = "==0.19.2"
 requests = "==2.26.0"
 
 [dev-packages]
