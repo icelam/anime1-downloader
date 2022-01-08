@@ -471,6 +471,9 @@ class TestGetVideoStream(unittest.TestCase):
     def test_get_video_stream(self):
         """Test that it returns video stream with file name and file size"""
         result = get_video_stream('https://anime1.me/6965')
+        self.assertEqual(result['player_url'], 'https://v.anime1.me/watch?v=tS8VG')
+        self.assertEqual(result['player_data'], '{"c":"450","e":"1","t":1641037437,"p":0,"s":"70a6a7cffc009b1599de0009822b400c"}')
+        self.assertEqual(result['player_api_response']['l'], '//pekora.v.anime1.me/450/1.mp4')
         self.assertEqual(result['stream'].status_code, 200)
         self.assertEqual(result['file_name'], '1.mp4')
         self.assertEqual(result['file_size_in_bytes'], 23)
@@ -479,13 +482,24 @@ class TestGetVideoStream(unittest.TestCase):
     def test_get_video_stream_invalid_video_signature(self):
         """Test that it return None when video signature is invalid"""
         result = get_video_stream('https://anime1.me/6966')
-        self.assertIsNone(result)
+        self.assertEqual(result['player_url'], 'https://v.anime1.me/watch?v=_bBHU')
+        self.assertEqual(result['player_data'], '{"c":"403","e":"3","t":1641042078,"p":0,"s":"b7818f6857e44d303e9f0f3b37e70194"}')
+        self.assertEqual(result['player_api_response']['success'], False)
+        self.assertEqual(result['player_api_response']['errors'], ['Signature invalid.'])
+        self.assertEqual(result['stream'], None)
+        self.assertEqual(result['file_name'], None)
+        self.assertEqual(result['file_size_in_bytes'], None)
 
     @responses.activate
     def test_get_video_stream_invalid_video_detail_url(self):
         """Test that it return None when video detail url is invalid"""
         result = get_video_stream('https://anime1.me/2018%e5%b9%b4%e7%a7%8b%e5%ad%a3%e6%96%b0%e7%95%aa')
-        self.assertIsNone(result)
+        self.assertEqual(result['player_url'], None)
+        self.assertEqual(result['player_data'], None)
+        self.assertEqual(result['player_api_response'], None)
+        self.assertEqual(result['stream'], None)
+        self.assertEqual(result['file_name'], None)
+        self.assertEqual(result['file_size_in_bytes'], None)
 
 if __name__ == '__main__':
     unittest.main()
