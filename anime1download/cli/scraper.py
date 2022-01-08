@@ -66,8 +66,9 @@ def get_player_url(video_detail_url):
     """Get player link from video detail page"""
     video_detail_html = requests.get(video_detail_url).text
     soup = BeautifulSoup(video_detail_html, 'html.parser')
-    play_button = soup.find('button', { 'class': 'loadvideo' })
-    return play_button.attrs['data-src'] if play_button is not None else None
+    entry_content = soup.find('div', { 'class': 'entry-content' })
+    player_iframe = entry_content.find('iframe') if entry_content is not None else None
+    return player_iframe.attrs['src'] if player_iframe is not None else None
 
 def get_player_data(player_url):
     """Get player data from player"""
