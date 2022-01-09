@@ -78,27 +78,39 @@ def get_player_data(player_url):
 
 def get_video_stream(video_detail_url):
     """Get video stream and file info from mp4 link"""
-    player_url = get_player_url(video_detail_url)
-    player_data = get_player_data(player_url) if player_url is not None else None
 
-    if not player_data:
-        return None
+    video_info = {
+        'player_url': None,
+        'player_data': None,
+        'player_api_response': None,
+        'stream': None,
+        'file_name': None,
+        'file_size_in_bytes': None
+    }
+
+    video_info['player_url'] = get_player_url(video_detail_url)
+    video_info['player_data'] = get_player_data(video_info['player_url']) \
+        if video_info['player_url'] is not None else None
+
+    if not video_info['player_data']:
+        return video_info
 
     # Initialize request client for storing cookies
     client = requests.session()
-    video_file_info = client.post(
+    video_info['player_api_response'] = client.post(
         'https://v.anime1.me/api',
-        data={ 'd': player_data }
+        data={ 'd': video_info['player_data'] }
     ).json()
 
-    if not 'l' in video_file_info.keys():
-        return None
+    if not 'l' in video_info['player_api_response'].keys():
+        return video_info
 
     # Get video stream
-    video_stream = client.get('https:' + video_file_info['l'], stream=True, timeout=60)
+    video_url = video_info['player_api_response']['l']
+    video_stream = client.get('https:' + video_url , stream=True, timeout=60)
 
-    return {
-        'stream': video_stream,
-        'file_name': (video_file_info['l'].split('/'))[-1],
-        'file_size_in_bytes': int(video_stream.headers.get('content-length', 0))
-    } if video_stream.status_code == 200 else None
+    video_info['stream'] = video_stream
+    video_info['file_name'] = (video_url.split('/'))[-1]
+    video_info['file_size_in_bytes'] = int(video_stream.headers.get('content-length', 0))
+
+    return video_info
