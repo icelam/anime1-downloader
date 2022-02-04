@@ -62,25 +62,20 @@ def extract_search_results(html):
         'animes_info': animes_info
     }
 
-def get_player_url(video_detail_url):
-    """Get player link from video detail page"""
+def get_player_data(video_detail_url):
+    """Get player data from video detail page"""
     video_detail_html = requests.get(video_detail_url).text
     soup = BeautifulSoup(video_detail_html, 'html.parser')
     entry_content = soup.find('div', { 'class': 'entry-content' })
-    player_iframe = entry_content.find('iframe') if entry_content is not None else None
-    return player_iframe.attrs['src'] if player_iframe is not None else None
+    player_element = entry_content.find('video') if entry_content is not None else None
+    data = player_element.attrs['data-apireq'] if player_element is not None else None
 
-def get_player_data(player_url):
-    """Get player data from player"""
-    player_html = requests.get(player_url).text
-    data = re.findall(r'x\.send\(\'d=(.+)\'\)', player_html)
-    return unquote(data[0], 'utf-8') if data else None
+    return unquote(data, 'utf-8') if data else None
 
 def get_video_stream(video_detail_url):
     """Get video stream and file info from mp4 link"""
 
     video_info = {
-        'player_url': None,
         'player_data': None,
         'player_api_response': None,
         'stream': None,
@@ -88,9 +83,7 @@ def get_video_stream(video_detail_url):
         'file_size_in_bytes': None
     }
 
-    video_info['player_url'] = get_player_url(video_detail_url)
-    video_info['player_data'] = get_player_data(video_info['player_url']) \
-        if video_info['player_url'] is not None else None
+    video_info['player_data'] = get_player_data(video_detail_url)
 
     if not video_info['player_data']:
         return video_info
