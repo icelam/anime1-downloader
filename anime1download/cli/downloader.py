@@ -2,6 +2,8 @@
 
 import os
 import sys
+import logging
+import traceback
 import concurrent.futures
 import configparser
 from PyInquirer import prompt
@@ -14,10 +16,20 @@ from cli.exceptions import (
 from cli.scraper import get_search_result, get_video_stream
 from cli.constants import CLI_VERSION
 
+# Logging configuration
+logging.basicConfig(
+    filename='anime1download.log',
+    format='[%(asctime)s]\t%(levelname)s\t%(message)s',
+    datefmt='%d/%b/%Y:%H:%M:%S %z',
+    level=logging.INFO,
+    encoding='utf8'
+)
+
 # Load configurations
 config = configparser.ConfigParser()
 config_path = os.path.join(os.getcwd(), 'config.ini')
 config.read(config_path)
+logging.info('已載入 config.ini: %s', dict(config.items("CLI")))
 
 def start():
     """Main entry function that display questions to guide user through the download journey"""
@@ -31,10 +43,15 @@ def start():
     }])
 
     if not answer1:
+        logging.info('使用者取消輸入搜尋關鍵字')
         sys.exit(0)
+
+    logging.info('開始搜尋與「%s」相關的動畫', answer1["keyword"])
 
     anime_list = search_anime(answer1['keyword'])
     category_list = list({anime['category'] for anime in anime_list})
+
+    logging.info('完成搜尋與「%s」相關的動畫: %s', answer1["keyword"], anime_list)
 
     answer2 = prompt([{
         'type': 'list',
@@ -44,6 +61,7 @@ def start():
     }])
 
     if not answer2:
+        logging.info('使用者取消選擇要下載的動畫')
         sys.exit(0)
 
     answer3 = prompt([{
@@ -61,7 +79,12 @@ def start():
     }])
 
     if not answer3:
+        logging.info('使用者取消選擇要下載的集數')
         sys.exit(0)
+
+    selected_episode = [anime for anime in anime_list if anime['title'] in answer3['episode']]
+
+    logging.info('開始下載動畫「%s」: %s', answer2["category"], selected_episode)
 
     # Create video directory for saving downloaded videos
     video_directory = os.path.join(
@@ -71,6 +94,7 @@ def start():
     )
 
     if not os.path.exists(video_directory):
+        logging.info('路徑 %s 不存在，開始創建', video_directory)
         os.makedirs(video_directory)
 
     # Start download
@@ -78,13 +102,15 @@ def start():
     with concurrent.futures.ThreadPoolExecutor(max_workers=max_parallel_download) as executor:
         executor.map(
             download_video,
-            [anime for anime in anime_list if anime['title'] in answer3['episode']]
+            selected_episode
         )
 
     print('\n== 所有下載已經完成，多謝使用 Anime1.me 下載器 ==')
+    logging.info('所有下載已經完成')
 
 def search_anime(keyword):
     """Handler to retrieve search result on anime1.me"""
+
     spinner = Halo(text='搜尋中，請耐心等候⋯⋯', spinner='dots')
 
     try:
@@ -93,16 +119,24 @@ def search_anime(keyword):
         spinner.stop()
 
         if not animes:
-            raise EmptySearchResultError
+            raise EmptySearchResultError(keyword)
 
         spinner.succeed('搜尋完成！')
 
         return animes
-    except EmptySearchResultError:
+    except EmptySearchResultError as error:
         spinner.fail('抱歉，您輸入的關鍵字找不到任何東西！')
+        logging.warning(error)
         sys.exit(0)
-    except Exception as error:
+    except Exception as error: # pylint: disable=broad-except
         spinner.fail(f'抱歉，搜尋過程中出現了未知錯誤 (除錯訊息：{error=}, {type(error)=})')
+        traceback_string = '\\n'.join(traceback.format_exc().splitlines())
+        logging.error(
+            '搜尋過程中出現了未知錯誤 (除錯訊息：error=%s, type(error)=%s, traceback=%s)',
+            error,
+            type(error),
+            traceback_string
+        )
         sys.exit(1)
 
 def download_video(anime_info):
@@ -114,8 +148,11 @@ def download_video(anime_info):
 
         video_stream_info = get_video_stream(anime_info['url'])
 
-        if not video_stream_info:
-            raise NoVideoFoundError
+        if not video_stream_info['stream']:
+            raise NoVideoFoundError(video_stream_info)
+
+        if video_stream_info['stream'].status_code != 200:
+            raise VideoStreamConnectionError(video_stream_info)
 
         # Save video stream to video directory
         file_path = os.path.join(
@@ -136,12 +173,22 @@ def download_video(anime_info):
                 file.write(data)
 
         spinner.succeed(f'{anime_info["title"]}: 下載完成')
-    except NoVideoFoundError:
+    except NoVideoFoundError as error:
         spinner.fail(f'{anime_info["title"]}: 找不到影片地址，略過下載')
-    except VideoStreamConnectionError:
+        logging.error(error)
+    except VideoStreamConnectionError as error:
         spinner.fail(f'{anime_info["title"]}: 無法加載影片，請稍後重試')
+        logging.error(error)
     except KeyboardInterrupt:
         spinner.fail('退出程式，取消所有下載')
+        logging.info(error)
         sys.exit(0)
     except Exception as error: # pylint: disable=broad-except
         spinner.fail(f'{anime_info["title"]}: 下載過程中出現了未知錯誤，請稍後重試 (除錯訊息：{error=}, {type(error)=})')
+        traceback_string = '\\n'.join(traceback.format_exc().splitlines())
+        logging.error(
+            '下載過程中出現了未知錯誤 (除錯訊息：error=%s, type(error)=%s, traceback=%s)',
+            error,
+            type(error),
+            traceback_string
+        )
