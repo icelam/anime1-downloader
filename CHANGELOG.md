@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/icelam/anime1-downloader/compare/v1.2.0...v1.3.0) (2022-02-05)
+
+
+### Features
+
+* add application log ([#8](https://github.com/icelam/anime1-downloader/issues/8)) ([abb0acb](https://github.com/icelam/anime1-downloader/commit/abb0acb70addc0ef1bf01eb9eec375aec45c1580))
+* update get player data logic in response to change on anime1.me ([#9](https://github.com/icelam/anime1-downloader/issues/9)) ([8f5fd68](https://github.com/icelam/anime1-downloader/commit/8f5fd681b5784e7754c23718591e8d0701bffd2b))
+
 ## [1.2.0](https://github.com/icelam/anime1-downloader/compare/v1.1.1...v1.2.0) (2022-01-08)
 
 
