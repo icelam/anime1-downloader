@@ -427,7 +427,7 @@ class TestGetVideoStream(unittest.TestCase):
         """Test that it returns video stream with file name and file size"""
         result = get_video_stream('https://anime1.me/6965')
         self.assertEqual(result['player_data'], '{"c":"450","e":"1","t":1643960437,"p":0,"s":"2b0446ceb4900c21f663e1c7069da249"}')
-        self.assertEqual(result['player_api_response']['l'], '//pekora.v.anime1.me/450/1.mp4')
+        self.assertEqual(result['player_api_response']['s']['src'], '//pekora.v.anime1.me/450/1.mp4')
         self.assertEqual(result['stream'].status_code, 200)
         self.assertEqual(result['file_name'], '1.mp4')
         self.assertEqual(result['file_size_in_bytes'], 23)
