@@ -95,11 +95,12 @@ def get_video_stream(video_detail_url):
         data={ 'd': video_info['player_data'] }
     ).json()
 
-    if not 'l' in video_info['player_api_response'].keys():
+    if not 's' in video_info['player_api_response'].keys() \
+        or not 'src' in video_info['player_api_response']['s']:
         return video_info
 
     # Get video stream
-    video_url = video_info['player_api_response']['l']
+    video_url = video_info['player_api_response']['s']['src']
     video_stream = client.get('https:' + video_url , stream=True, timeout=60)
 
     video_info['stream'] = video_stream
