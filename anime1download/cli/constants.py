@@ -1,3 +1,3 @@
 """Constant variables"""
 
-CLI_VERSION = '1.4.0'
+CLI_VERSION = '1.5.0'
