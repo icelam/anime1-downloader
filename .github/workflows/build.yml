@@ -1,12 +1,17 @@
 name: Build
 on:
-  pull_request:
-    types: [opened, synchronize, reopened]
   push:
     branches:
-      - 'develop'
+      - develop
+      - master
     tags-ignore:
-      - '**' # prevent double build on release tag
+      - '**' # prevent duplicate builds for any push of release tags
+  pull_request:
+    branches:
+      # triggers when base branch is integration branch of feature branches
+      # or develop, exclude master
+      - '**'
+      - '!master'
 jobs:
   test:
     runs-on: ubuntu-latest
