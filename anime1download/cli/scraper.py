@@ -66,8 +66,8 @@ def get_player_data(video_detail_url):
     """Get player data from video detail page"""
     video_detail_html = requests.get(video_detail_url).text
     soup = BeautifulSoup(video_detail_html, 'html.parser')
-    entry_content = soup.find('div', { 'class': 'entry-content' })
-    player_element = entry_content.find('video') if entry_content is not None else None
+    vjs_container = soup.find('div', { 'class': 'vjscontainer' })
+    player_element = vjs_container.find('video') if vjs_container is not None else None
     data = player_element.attrs['data-apireq'] if player_element is not None else None
 
     return unquote(data, 'utf-8') if data else None
@@ -96,11 +96,12 @@ def get_video_stream(video_detail_url):
     ).json()
 
     if not 's' in video_info['player_api_response'].keys() \
-        or not 'src' in video_info['player_api_response']['s']:
+        or not video_info['player_api_response']['s'] \
+        or not 'src' in video_info['player_api_response']['s'][0]:
         return video_info
 
     # Get video stream
-    video_url = video_info['player_api_response']['s']['src']
+    video_url = video_info['player_api_response']['s'][0]['src']
     video_stream = client.get('https:' + video_url , stream=True, timeout=60)
 
     video_info['stream'] = video_stream
