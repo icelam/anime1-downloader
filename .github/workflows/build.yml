@@ -3,9 +3,8 @@ on:
   push:
     branches:
       - develop
-      - master
     tags-ignore:
-      - '**' # prevent duplicate builds for any push of release tags
+      - '**' # prevent duplicate builds for any push of tags
   pull_request:
     branches:
       # triggers when base branch is integration branch of feature branches
