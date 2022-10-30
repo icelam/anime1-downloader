@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/icelam/anime1-downloader/compare/v1.5.0...v1.5.1) (2022-10-30)
+
+
+### Bug Fixes
+
+* load correct mp4 video source for more that one file type returned ([#16](https://github.com/icelam/anime1-downloader/issues/16)) ([f3adfa5](https://github.com/icelam/anime1-downloader/commit/f3adfa5ea5379eab39d795f6db726d83d306712e))
+
 ## [1.5.0](https://github.com/icelam/anime1-downloader/compare/v1.4.0...v1.5.0) (2022-07-21)
 
 
