@@ -78,6 +78,7 @@ def get_video_stream(video_detail_url):
     video_info = {
         'player_data': None,
         'player_api_response': None,
+        'url': None,
         'stream': None,
         'file_name': None,
         'file_size_in_bytes': None
@@ -100,10 +101,21 @@ def get_video_stream(video_detail_url):
         or not 'src' in video_info['player_api_response']['s'][0]:
         return video_info
 
+    # Currently we does not support m3u8 url, find the first non m3u8 source
+    # FIXME: Research and support m3u8 url
+    video_source_index = next(
+        (
+            i for i, video_source in enumerate(video_info['player_api_response']['s']) \
+                if video_source["type"] != "application/x-mpegURL"
+        ),
+        None
+    )
+
     # Get video stream
-    video_url = video_info['player_api_response']['s'][0]['src']
+    video_url = video_info['player_api_response']['s'][video_source_index]['src']
     video_stream = client.get('https:' + video_url , stream=True, timeout=60)
 
+    video_info['url'] = video_url
     video_info['stream'] = video_stream
     video_info['file_name'] = (video_url.split('/'))[-1]
     video_info['file_size_in_bytes'] = int(video_stream.headers.get('content-length', 0))

@@ -29,6 +29,8 @@ season_detail_mock_response = get_mock_response('season-detail.html')
 video1_detail_mock_response = get_mock_response(os.path.join('video1', 'video-detail.html'))
 player1_api_mock_response = get_mock_response(os.path.join('video1', 'player-api.json'))
 video2_detail_mock_response = get_mock_response(os.path.join('video2', 'video-detail.html'))
+video3_detail_mock_response = get_mock_response(os.path.join('video3', 'video-detail.html'))
+player3_api_mock_response = get_mock_response(os.path.join('video3', 'player-api.json'))
 player_api_failed_response = get_mock_response(os.path.join('player-api-invalid-signature.json'))
 
 class TestGetSearchResult(unittest.TestCase):
@@ -414,6 +416,34 @@ class TestGetVideoStream(unittest.TestCase):
             status=403
         )
 
+        # Video 3 mock
+        responses.add(
+            responses.GET,
+            'https://anime1.me/18353',
+            body=video3_detail_mock_response,
+            status=200
+        )
+
+        responses.add(
+            responses.POST,
+            'https://v.anime1.me/api',
+            body=player3_api_mock_response,
+            match=[
+                responses.matchers.urlencoded_params_matcher({
+                    'd': '{"c":"1066","e":"10","t":1667126804,"p":2,"s":"1728de8642896024dd8937dc24fba3fb"}'
+                })
+            ],
+            status=200
+        )
+
+        responses.add(
+            responses.GET,
+            'https://fubuki.v.anime1.me/1066/10.mp4',
+            body=b'This is a mocked video.',
+            status=200,
+            auto_calculate_content_length=True
+        )
+
         # Season detail page mock
         responses.add(
             responses.GET,
@@ -427,7 +457,7 @@ class TestGetVideoStream(unittest.TestCase):
         """Test that it returns video stream with file name and file size"""
         result = get_video_stream('https://anime1.me/6965')
         self.assertEqual(result['player_data'], '{"c":"450","e":"1","t":1658416454,"p":0,"s":"04fe55bce2d94592d51d5bb662ae2bfb"}')
-        # self.assertEqual(result['player_api_response']['s'][0]['src'], '//pekora.v.anime1.me/450/1.mp4')
+        self.assertEqual(result['url'], '//pekora.v.anime1.me/450/1.mp4')
         self.assertEqual(result['stream'].status_code, 200)
         self.assertEqual(result['file_name'], '1.mp4')
         self.assertEqual(result['file_size_in_bytes'], 23)
@@ -450,8 +480,19 @@ class TestGetVideoStream(unittest.TestCase):
         self.assertEqual(result['player_data'], None)
         self.assertEqual(result['player_api_response'], None)
         self.assertEqual(result['stream'], None)
+        self.assertEqual(result['url'], None)
         self.assertEqual(result['file_name'], None)
         self.assertEqual(result['file_size_in_bytes'], None)
+
+    @responses.activate
+    def test_get_video_stream_skip_m3u8(self):
+        """Test that it returns correct video stream for non m3u8 source"""
+        result = get_video_stream('https://anime1.me/18353')
+        self.assertEqual(result['player_data'], '{"c":"1066","e":"10","t":1667126804,"p":2,"s":"1728de8642896024dd8937dc24fba3fb"}')
+        self.assertEqual(result['url'], '//fubuki.v.anime1.me/1066/10.mp4')
+        self.assertEqual(result['stream'].status_code, 200)
+        self.assertEqual(result['file_name'], '10.mp4')
+        self.assertEqual(result['file_size_in_bytes'], 23)
 
 if __name__ == '__main__':
     unittest.main()
