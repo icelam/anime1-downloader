@@ -13,7 +13,7 @@ def get_search_result(keyword):
     while True:
         search_url = search_result['previous_page_url'] \
             if search_result else 'https://anime1.me/?s=' + keyword
-        search_result_html = requests.get(search_url).text
+        search_result_html = requests.get(search_url, timeout=300).text
         search_result = extract_search_results(search_result_html)
         animes += search_result['animes_info']
 
@@ -64,7 +64,7 @@ def extract_search_results(html):
 
 def get_player_data(video_detail_url):
     """Get player data from video detail page"""
-    video_detail_html = requests.get(video_detail_url).text
+    video_detail_html = requests.get(video_detail_url, timeout=300).text
     soup = BeautifulSoup(video_detail_html, 'html.parser')
     vjs_container = soup.find('div', { 'class': 'vjscontainer' })
     player_element = vjs_container.find('video') if vjs_container is not None else None
