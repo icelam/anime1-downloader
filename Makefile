@@ -2,6 +2,7 @@
 
 SRC_FOLDER=anime1download
 TEST_FOLDER=tests
+DIST_FOLDER=dist
 
 # Init new virtual environment
 create-venv:
@@ -42,8 +43,9 @@ lint-ci:
 # Build for distribution
 build:
 	( \
-		rm -rf ./build ./dist ${SRC_FOLDER}.spec; \
+		rm -rf ./build ./${DIST_FOLDER} ${SRC_FOLDER}.spec; \
 		pipenv run pyinstaller --log-level DEBUG --onefile ${SRC_FOLDER}/__main__.py --name ${SRC_FOLDER}; \
+		cp ./config.ini ./${DIST_FOLDER}/config.ini \
 	)
 
 # Create the first release

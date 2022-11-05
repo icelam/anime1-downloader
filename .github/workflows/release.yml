@@ -48,7 +48,7 @@ jobs:
         run: |
           make build
       - name: Preserve build as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@main
         with:
           name: anime1download-${{ matrix.os }}
           path: ./dist/*
@@ -80,17 +80,17 @@ jobs:
         id: get-release-version
         run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
       - name: Download macOS executable from artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@main
         with:
           name: anime1download-macos-latest
           path: ./anime1download-macos-${{ steps.get-release-version.outputs.VERSION }}
       - name: Download Ubuntu executable from artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@main
         with:
           name: anime1download-ubuntu-latest
           path: ./anime1download-ubuntu-${{ steps.get-release-version.outputs.VERSION }}
       - name: Download Windows executable from artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@main
         with:
           name: anime1download-windows-latest
           path: ./anime1download-windows-${{ steps.get-release-version.outputs.VERSION }}

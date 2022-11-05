@@ -1,10 +1,21 @@
 """Custom exception types"""
 
-# pylint: disable=unnecessary-pass, super-init-not-called
+# pylint: disable=unnecessary-pass
 
 class Error(Exception):
     """Base class for other exceptions"""
     pass
+
+class ConfigFileNotFoundError(Error):
+    """Raised when config.ini cannot be found"""
+    def __init__(self, cwd_path):
+        self.cwd_path = cwd_path
+
+    def __str__(self):
+        return (
+            '無法載入設定檔 config.ini，請確保你已經將 config.ini 放置在當前的工作目錄。' +
+            f'如以丢失設定檔，請重新下載本程序。當前的工作目錄：{self.cwd_path}'
+        )
 
 class EmptySearchResultError(Error):
     """Raised when search result is empty in search_animes_on_anime1()"""

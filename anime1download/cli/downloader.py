@@ -11,7 +11,7 @@ from PyInquirer import prompt
 # https://github.com/manrajgrover/halo/pull/155
 from halo import Halo
 from cli.exceptions import (
-    EmptySearchResultError, NoVideoFoundError, VideoStreamConnectionError
+    ConfigFileNotFoundError, EmptySearchResultError, NoVideoFoundError, VideoStreamConnectionError
 )
 from cli.scraper import get_search_result, get_video_stream
 from cli.constants import CLI_VERSION
@@ -26,10 +26,34 @@ logging.basicConfig(
 )
 
 # Load configurations
-config = configparser.ConfigParser()
-config_path = os.path.join(os.getcwd(), 'config.ini')
-config.read(config_path)
-logging.info('已載入 config.ini: %s', dict(config.items("CLI")))
+try:
+    config_path = os.path.join(os.getcwd(), 'config.ini')
+
+    if not os.path.exists(config_path):
+        raise ConfigFileNotFoundError(os.getcwd())
+
+    config = configparser.ConfigParser()
+    config.read(config_path)
+    logging.info('已載入 config.ini: %s', dict(config.items("CLI")))
+except ConfigFileNotFoundError as application_load_error:
+    logging.error(application_load_error)
+    print(f'\033[91m✖\033[0m {application_load_error}')
+    sys.exit(0)
+except Exception as application_load_error: # pylint: disable=broad-except
+    load_error_traceback_string = '\\n'.join(traceback.format_exc().splitlines()) # pylint: disable=invalid-name
+    logging.error(
+        '無法啟動程式 (除錯訊息：error=%s, type(error)=%s, traceback=%s)',
+        application_load_error,
+        type(application_load_error),
+        load_error_traceback_string
+    )
+    print(
+        '\033[91m✖\033[0m 無法啟動程式 ' +
+        f'(除錯訊息：error={application_load_error}, ' +
+        f'ftype(error)={type(application_load_error)}, ' +
+        f'traceback={load_error_traceback_string})'
+    )
+    sys.exit(0)
 
 def start():
     """Main entry function that display questions to guide user through the download journey"""
@@ -74,7 +98,7 @@ def start():
         ],
         # Below line is not working due to issue #171 in PyInquirer
         # https://github.com/CITGuru/PyInquirer/issues/171
-        # FIXME: Consider switching to python-inquirer when python-inquirer's issue #115 is resolved
+        # FIXME: Consider switching to python-inquirer when python-inquirer's issue #171 is resolved
         # 'validate': lambda value: len(value) > 0 or '請選擇最少一個選項！'
     }])
 

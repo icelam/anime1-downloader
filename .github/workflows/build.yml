@@ -86,7 +86,7 @@ jobs:
         run: |
           make build
       - name: Preserve build as artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@main
         with:
           name: anime1download-${{ matrix.os }}
           path: ./dist/*
