@@ -203,7 +203,7 @@ def download_video(anime_info):
     except VideoStreamConnectionError as error:
         spinner.fail(f'{anime_info["title"]}: 無法加載影片，請稍後重試')
         logging.error(error)
-    except KeyboardInterrupt:
+    except KeyboardInterrupt as error:
         spinner.fail('退出程式，取消所有下載')
         logging.info(error)
         sys.exit(0)
