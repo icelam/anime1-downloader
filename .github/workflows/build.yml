@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
       - name: Setup Python version
-        uses: actions/setup-python@main
+        uses: actions/setup-python@v4
         with:
           python-version: 3.9.9
       - name: Install pipenv
@@ -70,9 +70,9 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
       - name: Setup Python version
-        uses: actions/setup-python@main
+        uses: actions/setup-python@v4
         with:
           python-version: 3.9.9
       - name: Install pipenv
@@ -86,7 +86,7 @@ jobs:
         run: |
           make build
       - name: Preserve build as artifact
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v3
         with:
           name: anime1download-${{ matrix.os }}
           path: ./dist/*
