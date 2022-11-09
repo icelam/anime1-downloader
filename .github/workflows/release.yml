@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
       - name: Setup Python version
-        uses: actions/setup-python@main
+        uses: actions/setup-python@v4
         with:
           python-version: 3.9.9
       - name: Install pipenv
@@ -32,9 +32,9 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
       - name: Setup Python version
-        uses: actions/setup-python@main
+        uses: actions/setup-python@v4
         with:
           python-version: 3.9.9
       - name: Install pipenv
@@ -48,7 +48,7 @@ jobs:
         run: |
           make build
       - name: Preserve build as artifact
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v3
         with:
           name: anime1download-${{ matrix.os }}
           path: ./dist/*
@@ -57,11 +57,11 @@ jobs:
     needs: [build]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
       - name: Setup Node.js version
-        uses: actions/setup-node@main
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.x
+          node-version: 16.x
       - name: Generate release body
         run: |
           npx rexreplace "(#+ \[\d+\.\d+\.\d+].*?)#+ \[?\d+\.\d+\.\d+]?" "_" -s -M -G -m -o "CHANGELOG.md" > RELEASE_BODY.md
@@ -80,17 +80,17 @@ jobs:
         id: get-release-version
         run: echo ::set-output name=VERSION::$(echo $GITHUB_REF | cut -d / -f 3)
       - name: Download macOS executable from artifacts
-        uses: actions/download-artifact@main
+        uses: actions/download-artifact@v3
         with:
           name: anime1download-macos-latest
           path: ./anime1download-macos-${{ steps.get-release-version.outputs.VERSION }}
       - name: Download Ubuntu executable from artifacts
-        uses: actions/download-artifact@main
+        uses: actions/download-artifact@v3
         with:
           name: anime1download-ubuntu-latest
           path: ./anime1download-ubuntu-${{ steps.get-release-version.outputs.VERSION }}
       - name: Download Windows executable from artifacts
-        uses: actions/download-artifact@main
+        uses: actions/download-artifact@v3
         with:
           name: anime1download-windows-latest
           path: ./anime1download-windows-${{ steps.get-release-version.outputs.VERSION }}
