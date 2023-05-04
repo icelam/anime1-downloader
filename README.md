@@ -1,5 +1,11 @@
 # Anime1.me 下載器
 
+> **Warning**  
+> 2023 年 5 月 5 日 終止維護通知：  
+> 由於最近Anime1.me新增了 Cloudflare 「我不是機械人」的驗證程序，導致程式無法運作。這個問題暫時並無任何解決方案，所以只能選擇停止維護。  
+> 
+> 這個小程式原本只是長假期和朋友一起練習 Python 爬蟲而製作出來，並沒有打算長期維護，而開發者本人在製作完本程式後也甚少使用。近年 [OTT 服務](https://zh.wikipedia.org/zh-hk/OTT%E6%9C%8D%E5%8A%A1#%E7%9F%A5%E5%90%8DOTT%E5%B9%B3%E5%8F%B0)盛行，要找到合法的中文字幕動畫相當容易。在此鼓勵路過的各位支持正版，幫助動漫產業發展。
+
 [![Latest version](https://img.shields.io/github/v/release/icelam/anime1-downloader.svg?sort=semver&label=latest)](https://github.com/icelam/anime1-downloader/releases)
 ![Build](https://github.com/icelam/anime1-downloader/actions/workflows/build.yml/badge.svg)
 ![Release](https://github.com/icelam/anime1-downloader/actions/workflows/release.yml/badge.svg)
