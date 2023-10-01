@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Python version
         uses: actions/setup-python@v4
         with:
@@ -32,7 +32,7 @@ jobs:
         os: [macos-latest, ubuntu-latest, windows-latest]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Python version
         uses: actions/setup-python@v4
         with:
@@ -57,7 +57,7 @@ jobs:
     needs: [build]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node.js version
         uses: actions/setup-node@v3
         with:
